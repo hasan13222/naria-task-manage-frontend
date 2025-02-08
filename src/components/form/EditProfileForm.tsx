@@ -1,15 +1,11 @@
-import { useNavigate } from "react-router-dom";
-import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
-import { Label } from "../components/ui/label";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import { Label } from "../ui/label";
 
-const Login = () => {
-
-    const navigate = useNavigate();
-  return (
-    <>
-      <h1 className="font-semibold text-3xl text-center">Log In</h1>
-      <form onSubmit={() => navigate('/dashboard')} className="flex flex-col gap-3 mt-2 w-[250px]">
+const EditProfileForm = () => {
+    return (
+        <>
+            <form>
         <div className="flex flex-col gap-2">
           <Label htmlFor="email" className="">
             Email
@@ -25,8 +21,8 @@ const Login = () => {
         <Button type="submit">Submit</Button>
         <p>Didn't Signed Up? <a className="underline" href="/register">Signup Here</a></p>
       </form>
-    </>
-  );
+        </>
+    );
 };
 
-export default Login;
+export default EditProfileForm;

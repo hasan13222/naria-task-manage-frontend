@@ -6,8 +6,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
+} from "../../components/ui/dropdown-menu";
+import { Button } from "../../components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -16,27 +16,27 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+} from "../../components/ui/dialog";
+import { Input } from "../../components/ui/input";
+import { Label } from "../../components/ui/label";
 import { Textarea } from "../ui/textarea";
 import { CalendarIcon } from "lucide-react";
 
 import { format } from "date-fns"
-import { cn } from "@/lib/utils";
-import { Calendar } from "@/components/ui/calendar";
+import { cn } from "../../lib/utils";
+import { Calendar } from "../../components/ui/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from "../../components/ui/popover";
 import { useState } from "react";
 
 const Topbar = ({ miniSidebar, setMiniSidebar }: any) => {  
   const [date, setDate] = useState<Date>()
   return (
     <>
-      <div className="topbar flex justify-between items-center py-5  sticky top-0 shadow-md z-10 w-full bg-white">
+      <div className="topbar flex justify-between items-center py-3  sticky top-0 shadow-md z-10 w-full bg-white">
         <div className="flex gap-1 items-center">
           <button
             onClick={() => setMiniSidebar(!miniSidebar)}
@@ -75,7 +75,7 @@ const Topbar = ({ miniSidebar, setMiniSidebar }: any) => {
                   <Label htmlFor="username" className="">
                     Due Date
                   </Label>
-                  <Popover className="">
+                  <Popover >
                     <PopoverTrigger className="" asChild>
                       <Button
                         variant={"outline"}
@@ -122,7 +122,7 @@ const Topbar = ({ miniSidebar, setMiniSidebar }: any) => {
               <DropdownMenuSeparator />
               <DropdownMenuItem>
                 <div className="w-full">
-                  <a className="inline-block w-full" href="/">
+                  <a className="inline-block w-full" href="/dashboard/profile">
                     Profile
                   </a>
                 </div>{" "}

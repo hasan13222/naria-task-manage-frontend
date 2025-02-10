@@ -7,7 +7,7 @@ const Sidebar = () => {
           <div className="flex gap-1 items-center">
             <img width={20} height={13} src="/logo-mini.svg" alt="logo" />
             <h1 className="bg-gradient-to-r from-accent via-secondary to-primary bg-clip-text text-transparent font-semibold text-lg">
-              NARIATSK
+              <a href="/dashboard">NARIATSK</a> 
             </h1>
           </div>
         </div>
@@ -15,21 +15,21 @@ const Sidebar = () => {
         {/* sidebar menu */}
         <ul className="sidebar_menu">
           <li
-            className={`bg-lightSecondary/30 border-primary/90 px-5 py-2 border-l-4 hover:bg-lightSecondary/30 cursor-pointer`}
+            className={`${location.pathname === "/dashboard" ? "bg-lightSecondary/30 border-primary/90" : "border-transparent"} px-5 py-2 border-l-4 hover:bg-lightSecondary/30 cursor-pointer`}
           >
             <a
               className={`inline-block w-full hover:scale-[1.01] transition-transform`}
-              href="/"
+              href="/dashboard"
             >
               Dashboard
             </a>
           </li>
           <li
-            className={`px-5 py-2 border-transparent border-l-4 hover:bg-lightSecondary/30 cursor-pointer`}
+            className={`${location.pathname === "/dashboard/tasks" ? "bg-lightSecondary/30 border-primary/90" : "border-transparent"} px-5 py-2 border-l-4 hover:bg-lightSecondary/30 cursor-pointer`}
           >
             <a
               className={`inline-block w-full hover:scale-[1.01] transition-transform`}
-              href="/"
+              href="/dashboard/tasks"
             >
               Tasks
             </a>

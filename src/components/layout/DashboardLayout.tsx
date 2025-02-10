@@ -4,6 +4,7 @@ import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 import { useEffect, useState } from "react";
 import MiniSidebar from "./MiniSidebar";
+import { Toaster } from "sonner";
 const DashboardLayout = () => {
   const [miniSidebar, setMiniSidebar] = useState(false);
 
@@ -43,6 +44,7 @@ const DashboardLayout = () => {
           </div>
         </div>
       </div>
+      <Toaster closeButton/>
     </>
   );
 };

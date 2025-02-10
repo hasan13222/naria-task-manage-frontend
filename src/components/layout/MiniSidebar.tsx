@@ -4,7 +4,7 @@ const MiniSidebar = () => {
   const location = useLocation();
   return (
     <>
-      <div className="sidebar min-w-[50px] max-w-[280px] small_sidebar sticky left-0 top-0 max-h-svh h-svh overflow-auto border-r bg-white border-slate-200">
+      <div className="sidebar min-w-[50px] max-w-[280px] small_sidebar z-10 sticky left-0 top-0 max-h-svh h-svh overflow-auto border-r bg-white border-slate-200">
         {/* logo */}
         <div className="logo py-5 pl-5 cursor-pointer">
           <div className="flex gap-1 items-center">

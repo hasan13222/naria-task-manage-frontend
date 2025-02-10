@@ -48,7 +48,7 @@ const Login = () => {
           <Label htmlFor="email" className="">
             Email
           </Label>
-          <Input required type="email" id="email" placeholder="Email" />
+          <Input defaultValue="jamil8305@gmail.com" required type="email" id="email" placeholder="Email" />
         </div>
         <div className="flex flex-col gap-2">
           <Label htmlFor="password" className="">
@@ -59,6 +59,7 @@ const Login = () => {
             type="password"
             id="password"
             placeholder="Password"
+            defaultValue="123456"
           />
           <div className="text-right underline">
             <a href="/forget-password">forgot password?</a>

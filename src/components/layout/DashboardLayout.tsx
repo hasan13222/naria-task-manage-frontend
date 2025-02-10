@@ -14,7 +14,7 @@ const DashboardLayout = () => {
       clearTimeout(timeout);
     }
     timeout = setTimeout(() => {
-      if (window.innerWidth < 600) {
+      if (window.innerWidth < 750) {
         setMiniSidebar(true);
       } else {
         setMiniSidebar(false);

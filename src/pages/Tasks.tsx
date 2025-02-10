@@ -139,7 +139,7 @@ function Tasks() {
               {[
                 ...Array(tasks?.meta?.totalPage)
                   .fill(1)
-                  .map((item, index) => (
+                  .map((_, index) => (
                     <PaginationItem
                       className="px-3 rounded-md py-1 bg-black text-white cursor-pointer"
                       onClick={() => setPage(index + 1)}

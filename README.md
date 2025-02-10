@@ -1,50 +1,20 @@
-# React + TypeScript + Vite
+## Sports Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### [Live URL](https://naria-task-manage-front.vercel.app) 
 
-Currently, two official plugins are available:
+### Overview
+For design decision of the project I researched different task management site and then take one as reference. I followed ui/ux theory like user interaction with card, button. I kept in mind user experience and try to keep the application minimalistic and simple.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Redux
+For redux setup First I created a file called baseApi.ts. here I give base url and all endpoints handled by injecting this baseapi. I took two file to handle one for authapi and one for taskapi.
 
-## Expanding the ESLint configuration
+### Follow the below instructions to run the application in your local machine
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- First clone the github repository or download the zip file
+- run "npm install" command. Thus you can get all the required dependencies required for the application
+- prepare backend and run as per backend
+- In Profile update form in place of imgbb api key, replace your api key with
+- in redux base api, replace backend url
+- then run "npm run dev" command to run the application as development mode in your machine
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Thanks for following the instructions.
